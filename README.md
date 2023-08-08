@@ -107,14 +107,4 @@ Devin Kreuzer, Dominique Beaini, Will Hamilton, Vincent L ́etourneau, and Prude
 Chengxuan Ying, Tianle Cai, Shengjie Luo, Shuxin Zheng, Guolin Ke, Di He, Yanming Shen, and Tie-Yan Liu. Do transformers really perform badly for graph representation? Advances in Neural Information Processing Systems, 34:28877–28888, 2021.
 
 
-### Abalation Study
-We perform abalation study on the total number steps of random walk to calculate the encoded substructure information. We use Graph substructure counting dataset to evaluate how the total number of random walk steps affect the model performance of SEK-PPGN, where we use a 1-layer 3-hop SEk-PPGN, and train the model using the same experiment setting in the paper. The following figure illustrates how different number of random walk steps affect SEk-PPGN for this dataset. As we can see, injecting contextualized substructure features is beneficial to uplift the model's expressive power consistently across all the four tasks. Theoretically six steps of random walk is sufficient to encode the substructure information according to our proposed theorem, as we can see in the figure, more steps doesn't neccessarily leads to better performance.
-
-<img src="https://github.com/hsaduasdb23/Expressiveness_K_hop_GNNs/blob/main/more_results/graphcount_table.jpg" width="488" height="179" alt="abalation_GC"/><br/>
-
-Furthermore, we also evaluate its effect to SEK-GIN using four TUDataset, namely MUTAG, PROTEINS, BZR and IMDB-BINARY using both experiment settings described in the experiment section of our paper. We fix the SEK-GIn to be 2-layer and 3-hop with summation as its combine function, we experiment over different random walk steps including 0,8,16,24 and 32. The figure is illustrated below:
-
-<img src="https://github.com/hsaduasdb23/Expressiveness_K_hop_GNNs/blob/main/more_results/abalation_TU.jpg" width="1098" height="822" alt="abalation_GC"/><br/>
-
-Our conclusion is similar- i) without incorporating the substructure information, the model performs worst across all the four datasets. The model generally performs better with the contextualized substructure information. ii) the number of steps should be sufficient to encode the substructure to prevent from information loss.
 
