@@ -96,15 +96,7 @@ For GraphProperty dataset, GraphCount and QM9 dataset, as the search space is no
 <img src="https://github.com/hsaduasdb23/Expressiveness_K_hop_GNNs/blob/main/qm9_result.png" width="700" height="320" alt="QM9"/><br/>
 
 
-### More Experimental Results
 
-#### ZINC-12k
-
-<img src="https://github.com/hsaduasdb23/Expressiveness_K_hop_GNNs/blob/main/more_results/result_transformer.jpg" width="373" height="230" alt="ZINC-12k"/><br/>
-
-To evaluate our method, we further experiment on ZINC-12k dataset, which is commonly used as a benchmark for evaluating the predictive performance of graph transformers. The number of layers in SEK-GIN is searched over:{5,7,8}, and the number of hops we search is:{4,5}. We use learning rate of 2e-3 and use ReduceLROnPlateau learning rate scheduler with a patience of 10 and a reduction factor of 0.65. 
-
-As we can see, our proposed method can outperform GT[GTDwivedi & Bresson (2020)] which is a generalization of transformer architecture to graphs by using laplacian eigenvectors as positional encoding for each token(node) in the network. However, it performs slightly worse than SAN[Kreuzer et al. (2021)] and GraphTransformer[Ying et al. (2021)], this might due to the reason that xxxxx. However, our proposed framework can outperform message-passing GNNs by a large margin, as illustrated in the table - although we use GIN as our base encoder, SEK-GIN is able to achieve a absolute improvement of 0.362 over GIN in test MAE, demonstrating the effectiveness of using a substructure encoding function and injects contextualized substructure information. The experiment result for other methods is adapted from Ying et al. (2021). 
 
 __References__
 
