@@ -97,6 +97,23 @@ For GraphProperty dataset, GraphCount and QM9 dataset, as the search space is no
 
 
 
+# Citation
+
+If you find our paper and repo useful, please cite our work.
+
+```bibtex
+@inproceedings{Yao_2023, series={KDD ’23},
+   title={Improving the Expressiveness of K-hop Message-Passing GNNs by Injecting Contextualized Substructure Information},
+   url={http://dx.doi.org/10.1145/3580305.3599390},
+   DOI={10.1145/3580305.3599390},
+   booktitle={Proceedings of the 29th ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+   publisher={ACM},
+   author={Yao, Tianjun and Wang, Yingxu and Zhang, Kun and Liang, Shangsong},
+   year={2023},
+   month=aug, collection={KDD ’23} }
+
+```
+
 
 __References__
 
